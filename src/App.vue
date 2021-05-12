@@ -5,6 +5,7 @@
 
         <div class="col-md-6 offset-md-3">
           <div class="form">
+            <h2 class="h3">Novo Cliente</h2>
             <div class="text-danger nomeErro" v-show="nomeErro"><small>Nome inválido, preencha corretamente!</small></div>
             <input class="form-control" type="text" placeholder="nome" v-model="nomeField">
             <input class="form-control" type="email" placeholder="seu@email.com" v-model="emailField">
@@ -15,7 +16,7 @@
 
         <div class="col-md-12">
           <div class="row">
-            <div class="col-md-4 mb-4" v-for="cliente in clientes" :key="cliente.id">
+            <div class="col-md-4 mb-4" v-for="cliente in orderClientes" :key="cliente.id">
               <Cliente :cliente="cliente" @eventoRemover="removerUsuario($event)"/>
             </div>
           </div>
@@ -28,7 +29,7 @@
 </template>
 
 <script>
-// import { component } from 'vue/types/umd'
+import _ from 'lodash'
 import Cliente from './components/Cliente'
 // import Produto from './components/Produto'
 
@@ -66,6 +67,11 @@ export default {
       this.clientes = novoArray
     }
   },
+  computed: {
+    orderClientes: function(){
+      return _.orderBy(this.clientes,['nome'],['asc'])
+    }
+  }
 }
 
 </script>
