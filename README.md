@@ -1,24 +1,5 @@
-# guiaclientes
+# Cadastro de Clientes
 
-## Project setup
-```
-yarn install
-```
+https://cadclientes.netlify.app/
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/340b8d11-996a-48d8-9af3-6939060d682a/deploy-status)](https://app.netlify.com/sites/cadclientes/deploys)
